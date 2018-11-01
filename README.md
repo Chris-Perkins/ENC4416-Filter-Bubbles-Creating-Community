@@ -13,8 +13,8 @@ to install node modules:
 Sources:
 
 Pros:
-* [Should we worry about filter bubbles?](https://eds.b.ebscohost.com/eds/detail/detail?vid=1&sid=8ff1e8be-5fed-431a-8b79-51d5ae5786ca%40sessionmgr103&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=edsdoj.6c796a537d45ccaa76a822d8a87ded&db=edsdoj)
-* [When the Filter Bubble Bursts](https://eds.a.ebscohost.com/eds/detail/detail?vid=1&sid=6bda1189-20f3-40a4-a71f-3e719cf34178%40pdc-v-sessmgr01&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=edsarx.1602.05642&db=edsarx)
+* [Should we worry about filter bubbles?](https://policyreview.info/articles/analysis/should-we-worry-about-filter-bubbles)
+* [When the Filter Bubble Bursts](https://arxiv.org/pdf/1602.05642.pdf)
 
 Cons:
-* [Tech giants face news 'filter bubbles' scrutiny](https://eds.b.ebscohost.com/eds/detail/detail?vid=4&sid=8ff1e8be-5fed-431a-8b79-51d5ae5786ca%40sessionmgr103&bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#db=edsgao&AN=edsgcl.528918293)
+* [Tech giants face news 'filter bubbles' scrutiny](https://resolver.ebscohost.com/openurl?sid=EBSCO%3aedsgao%3aedsgcl.528918293&ISSN=03126315&EISSN=&ISBN=&volume=&issue=&date=20180227&spage=&pages=&title=The+Sydney+Morning+Herald+(Sydney%2c+Australia)&atitle=Tech+giants+face+news+%27filter+bubbles%27+scrutiny&aulast=&ID=pmid%3a%2cDOI%3a&site=ftf-live)
