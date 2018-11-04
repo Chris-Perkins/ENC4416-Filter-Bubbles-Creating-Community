@@ -19,3 +19,4 @@ Pros:
 
 Cons:
 * [Tech giants face news 'filter bubbles' scrutiny](https://resolver.ebscohost.com/openurl?sid=EBSCO%3aedsgao%3aedsgcl.528918293&ISSN=03126315&EISSN=&ISBN=&volume=&issue=&date=20180227&spage=&pages=&title=The+Sydney+Morning+Herald+(Sydney%2c+Australia)&atitle=Tech+giants+face+news+%27filter+bubbles%27+scrutiny&aulast=&ID=pmid%3a%2cDOI%3a&site=ftf-live)
+* [How Filter Bubbles Distort Reality: Everything You Need to Know](https://fs.blog/2017/07/filter-bubbles/)
