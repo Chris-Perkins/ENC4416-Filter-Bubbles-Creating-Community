@@ -10,6 +10,20 @@ to install node modules:
 1. run 'npm install'
 1. `npm run-script build`
 
+Color scheme Blues:
+1. #62688E
+1. #424974
+1. #2C325C
+1. #1A214A
+1. #0B1031
+
+Color scheme Green accents:
+1. #D3F7E2
+1. #70E39F
+1. #34D676
+1. #00CF54
+1. #008C39
+
 Sources:
 
 Pros:

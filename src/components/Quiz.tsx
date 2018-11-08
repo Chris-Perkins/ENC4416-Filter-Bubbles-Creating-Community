@@ -14,8 +14,8 @@ export class Quiz extends React.Component {
     render() {
         return (
             <Container style={pageStyle}>
-                <p2>Filter Bubbles</p2>
-                <a href="www.google.com" target="_blank">LOL</a>
+                <h2>Filter Bubbles</h2>
+                <a href="www.google.com" target="_blank">Start Quiz</a>
             </Container>
         );
     }
