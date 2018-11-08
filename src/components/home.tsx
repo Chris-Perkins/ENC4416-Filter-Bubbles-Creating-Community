@@ -6,8 +6,10 @@ import {
 import { Quiz } from "./Quiz";
 
 const pageStyle = {
-    width:"100%",
-    height:"100%",
+    marginTop:"2.5%",
+    marginLeft:"2.5%",
+    width:"95%",
+    height:"90%",
     backgroundColor:"#FF0000",
     position:"absolute" as "absolute"
 };
@@ -26,9 +28,9 @@ const paragraph = {
 export class Home extends React.Component {
     render() {
         return (
-            <Container style={pageStyle}>
+            <div style={pageStyle}>
                 <Quiz />
-            </Container>
+            </div>
         );
     }
 }
