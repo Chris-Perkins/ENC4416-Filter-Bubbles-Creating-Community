@@ -28,7 +28,7 @@ export class Home extends React.Component {
         return (
             <Container style={pageStyle}>
                 <Quiz />
-                <a href="www.google.com" target="_blank">LOL</a>
+                <a href="www.google.com" target="_blank">Start Quiz</a>
             </Container>
         );
     }
