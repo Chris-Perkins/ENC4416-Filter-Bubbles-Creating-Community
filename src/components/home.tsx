@@ -11,7 +11,8 @@ const pageStyle = {
     marginLeft:"2.5%",
     width: "95%",
     minHeight:"95%",
-    backgroundColor:"#F5F5F5",
+    backgroundColor:"rgba(200,200,200,0.2)",
+    
     position:"absolute" as "absolute"
 };
 

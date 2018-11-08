@@ -6,7 +6,7 @@ import {
 
 const pageStyle = {
     margin:"2.5%",
-    backgroundColor:"#FFFFFF",
+    backgroundColor:"rgba(255,255,255,0.5)",
 };
 
 const titleStyle = {
