@@ -1,4 +1,5 @@
 import * as React from "react";
+import RF from "react-native-responsive-fontsize";
 import {
     Jumbotron,
     Container,
@@ -8,20 +9,10 @@ import { Quiz } from "./Quiz";
 const pageStyle = {
     marginTop:"2.5%",
     marginLeft:"2.5%",
-    width:"95%",
-    height:"90%",
-    backgroundColor:"#FF0000",
+    width: "95%",
+    minHeight:"95%",
+    backgroundColor:"#F5F5F5",
     position:"absolute" as "absolute"
-};
-
-const divStyle = {
-    width:"100%",
-    height:"80%",
-    backgroundColor:"#00FF00"
-};
-
-const paragraph = {
-    color:"#0000FF"
 };
 
 
