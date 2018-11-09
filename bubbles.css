@@ -1,12 +1,12 @@
 #bubbleContainer {
 	z-index:-1;
 	overflow:hidden;
-	position: absolute;
+	position: fixed;
 	height:100%;
 	width:100%;
 }
 #bubbleContainer div {
-	position: absolute;
+	position: fixed;
 	z-index:-2;
 	border-radius:1000px;
 }
