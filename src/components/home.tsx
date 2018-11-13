@@ -1,6 +1,6 @@
 import * as React from "react";
 import { InfoBlock } from "./InfoBlock";
-import { HomeButtons } from "./HomeButtons";
+import { QuizButtonContainer } from "./QuizButtonContainer";
 
 const pageStyle = {
     marginTop:"2.5%",
@@ -16,7 +16,7 @@ export class Home extends React.Component {
         return (
             <div style={pageStyle}>
                 <InfoBlock />
-                <HomeButtons />
+                <QuizButtonContainer />
             </div>
         );
     }
