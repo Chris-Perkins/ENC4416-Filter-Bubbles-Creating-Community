@@ -11,13 +11,8 @@ var bubbleOptions = {
 	timer          : -1,    //The interval time
 	tick           : 100,   //The tick speed
 	bubbles        : [],    //The array of bubbles
-	hue            : 188,   //The hue
-	hueRand        : 20,    //The hue variance
-	saturation     : 63,    //The saturation
-	saturationRand : 10,    //The saturation variance
-	light          : 57,    //The lightness
-	lightRand      : 10,    //The lightness variance
-	opacityFactor  : 3,     //What Math.random() opacity should be divided by
+	colors         : [[98,104,142], [66,73,116], [44,50,92]], // The possible bubble colors (rgb)
+	opacityFactor  : 2,     //What Math.random() opacity should be divided by
 	minOpacity     : 0.1,   //The minimum opacity
 	ratio          : 45000, //The bubble:pixel ratio
 	update		   : function(tick) { //Function to change the tick timer
@@ -96,6 +91,14 @@ function Bubble(element) {
 	this.create();
 }
 
+function rgba(r, g, b, a){
+	// Floor components so they aren't decimals anymore (necessary for RGB conversion)
+	red = Math.floor(r);
+	green = Math.floor(g);
+	blue = Math.floor(b);
+	return ["rgb(", red, ",", green, ",", blue, ",", a, ")"].join("");
+  }
+
 /**
  * create() sets the position and velocity of the bubble element.
  * It then sets a semi-random visual styling of a bubble
@@ -111,34 +114,28 @@ Bubble.prototype.create = function() {
 	this.y = Math.random() * window.innerHeight;
 	
 	//Random velocity
-	this.xVel = (Math.random() * 4) - 2;
-	this.yVel = (Math.random() * 4) - 2;
+	this.xVel = (Math.random() * 2) - 1;
+	this.yVel = (Math.random() * 2) - 1;
 
 	//Set the size
 	this.diam = Math.floor(Math.random() * 160) + 40;
 	this.e.style.width=this.diam + "px";
 	this.e.style.height=this.diam + "px";
-	
-	//Set the color, with default bubbleOptions it is a bluish color
-	var hue = Math.floor(Math.random()*bubbleOptions.hueRand)
-	          +bubbleOptions.hue;
-	var saturation = Math.floor(Math.random() * bubbleOptions.saturationRand)
-	                 + bubbleOptions.saturation;
-	var light = Math.floor(Math.random()*bubbleOptions.lightRand)
-	            + bubbleOptions.light;
-	var opacity = Math.min( //The opacity must be <= 1
+
+	let opacity = Math.min( //The opacity must be <= 1
 	                  Math.max( //The random opacity must be >= minOpacity
 	                      Math.random()/bubbleOptions.opacityFactor,
 	                      bubbleOptions.minOpacity
 	                  ),
 	                  1
-	              );
-	var hsla="hsla("+hue+","+saturation+"%,"+light+"%,"+opacity+")";
-	this.e.style.backgroundColor = hsla;
+				  );
+	let color = bubbleOptions.colors[Math.round(Math.random() * (bubbleOptions.colors.length - 1))]
+	let bubbleColor = rgba(color[0], color[1], color[2], opacity)
+	this.e.style.backgroundColor = bubbleColor;
 	
 	//Set the glow
 	this.e.style.boxShadow= "0 0 "+ (Math.floor(Math.random()*10)+5)
-	                        + "px "+hsla;
+	                        + "px "+bubbleColor;
 
 	//Start at 0 opacity for the bubble to fade in
 	this.e.style.opacity = "0";

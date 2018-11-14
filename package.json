@@ -18,6 +18,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-native-responsive-fontsize": "^0.1.2",
+    "react-router": "^4.3.1",
     "reactstrap": "^6.3.1",
     "simple-flexbox": "^1.2.0",
     "style-loader": "^0.21.0",

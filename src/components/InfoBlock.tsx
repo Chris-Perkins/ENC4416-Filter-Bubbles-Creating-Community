@@ -9,11 +9,13 @@ const titleContainerStyle = {
 
 const titleTextStyle = {
     fontSize: "12vh",
-    fontWeight: "bold" as "bold"
+    fontWeight: "bold" as "bold",
+    color:"#FFFFFF"
 };
 
 const subtitleTextStyle = {
-    fontSize: "6vh"
+    fontSize: "6vh",
+    color:"#FFFFFF"
 };
 
 const infoTextStyle = {
@@ -21,7 +23,8 @@ const infoTextStyle = {
     textAlign: "left" as "left",
     marginLeft: "5.0%",
     marginRight: "5.0%",
-    marginTop: "2.0%"
+    marginTop: "2.0%",
+    color:"#FFFFFF"
 };
 
 export class InfoBlock extends React.Component {
