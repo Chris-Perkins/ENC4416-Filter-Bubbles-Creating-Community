@@ -1,6 +1,6 @@
 import * as React from "react";
 import Button from "@material-ui/core/Button";
-import { filterBubbleTheme } from "../theme";
+import { filterBubbleTheme } from "../filterBubbleTheme";
 import { MuiThemeProvider } from "@material-ui/core";
 
 const buttonContainerStyle = {
