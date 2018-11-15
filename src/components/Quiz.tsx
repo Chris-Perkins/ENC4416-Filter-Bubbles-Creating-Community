@@ -1,6 +1,7 @@
 import * as React from "react";
 import { filterBubbleTheme } from "../filterBubbleTheme";
 import { QuizQuestion } from "./QuizQuestion";
+import { Button, MuiThemeProvider } from "@material-ui/core";
 
 const pageStyle = {
     marginTop:"5%",
@@ -26,6 +27,12 @@ const quizHeader = {
     fontWeight: "bold" as "bold"
 };
 
+const nextQuestionButtonStyle = {
+    width: "100%",
+    marginTop: "1%",
+    fontSize: "2.5vh"
+};
+
 export class Quiz extends React.Component {
     render() {
         return (
@@ -45,6 +52,11 @@ export class Quiz extends React.Component {
                 <QuizQuestion>
                     bad
                 </QuizQuestion>
+                <MuiThemeProvider theme={filterBubbleTheme}>
+                    <Button style={nextQuestionButtonStyle} variant="contained" color="secondary">
+                        Next Question
+                    </Button>
+                </MuiThemeProvider>
             </div>
         );
     }
