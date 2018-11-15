@@ -11,7 +11,7 @@ var bubbleOptions = {
 	timer          : -1,    //The interval time
 	tick           : 100,   //The tick speed
 	bubbles        : [],    //The array of bubbles
-	colors         : [[98,104,142], [66,73,116], [44,50,92]], // The possible bubble colors (rgb)
+	colors         : [[2, 123, 189]], // The possible bubble colors (rgb)
 	opacityFactor  : 2,     //What Math.random() opacity should be divided by
 	minOpacity     : 0.1,   //The minimum opacity
 	ratio          : 45000, //The bubble:pixel ratio

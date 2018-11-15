@@ -1,5 +1,7 @@
 import * as React from "react";
 import Button from "@material-ui/core/Button";
+import { filterBubbleTheme } from "../theme";
+import { MuiThemeProvider } from "@material-ui/core";
 
 const buttonContainerStyle = {
     textAlign: "center" as "center",
@@ -20,9 +22,11 @@ export class QuizButtonContainer extends React.Component {
     render() {
         return (
             <div style={buttonContainerStyle}>
-                <Button style={individualButtonStyle} variant="contained" color="primary"> 
-                    Take The Quiz
-                </Button>
+                <MuiThemeProvider theme={filterBubbleTheme}>
+                    <Button style={individualButtonStyle} variant="contained" color="secondary"> 
+                        Take The Quiz
+                    </Button>
+                </MuiThemeProvider>
             </div>
         );
     }
