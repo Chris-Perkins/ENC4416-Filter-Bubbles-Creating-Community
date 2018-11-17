@@ -1,0 +1,27 @@
+Q3:	
+Have you ever found a niche community on an online platform?
+	A1:	I'm not sure what you mean
+	A2:	I've seen a few
+	A3:	I'm a part of one or more
+
+	Filter bubbles are known to help foster particularly niche communities by showing people with similar interests similar things [1]. They also help people with that niche interest find eachother, building a community. One example are all the communities around the various aspects of Minecraft. Youtube and Reddit bubble together similar content helping to form multiple redstone communities, building communities, pvp communities, etc.
+
+	[1] https://web.wpi.edu/Pubs/E-project/Available/E-project-011817-125559/unrestricted/MusicDiscoveryIQP_Report_12.21.16.pdf
+
+Q4:
+Have you ever happened upon racist, misogonistic or homophobic content on a social platform?
+	A1:	I see that sort of stuff occasionally
+	A2:	Rarely if ever do I see that
+	A3: I never see that kind of content
+
+	Unfortunately, there are racist, misogonistic and homophobic people on the internet and those people produce content all the time (think comments, videos, articles, etc.). One of the best ways to avoid seeing that kind of content is to let it be filtered out. Social platforms using filter bubbles will realize that you don't want to see that kind of content and so won't show it to you; that is the essence of a filter bubble.
+
+Q5:
+Do you often check news sites which don't share your opinions?
+	A1:	Never or almost never
+	A2:	Rarely
+	A3:	Occasionally
+
+	When it comes to changing minds, facts don't tend to suffice. In fact, overwhelming evidence can often be more intimidating than convincing [1]. Filter bubbles help people stay in a world which mostly agrees with them. There will also be the occasional farther left or right opinions. This system allows people to still see some facts but from a perspective which they agree with instead of from a perspective they hate (and then ignoring the whole argument).
+
+	[1] https://bigthink.com/think-tank/the-backfire-effect-why-facts-dont-win-arguments

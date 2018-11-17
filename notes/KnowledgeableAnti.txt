@@ -1,0 +1,37 @@
+Strongest arguments:
+	Allows creation of hateful communities
+	Isolates people
+	Can lead to gradual radicalization
+	dissenting opinions are harder to find
+
+Q3:
+How many conspiracy theories have you seen promoted online?
+	A1:	None or very few
+	A2:	A couple
+	A3:	Many
+
+	Conspiracies develop and spread in isolated communities which, lacking external perspectives, cultivate them. A few examples of the more absurd conspiracy theories are: 9/11 was an inside job, the Earth is flat, the moon landing never happened, vaccines cause autism, Jews / lizard-people / the Illuminati run the world, etc. There's a lot of overlap in these communities; paranoid people isolate themselves together and bounce crazy conspiracies off each other and kick out everyone who doesn't agree. Eventually, you end up with a tiny community with a derranged world view. Filter bubbles partly contribute to this effect by showing people who already believe these sorts of things more content which agrees with them and keeping dissenting opinions from them [1].
+
+	[1] https://www.wired.com/2017/05/seth-rich-filter-bubble/
+
+Q4:
+Have you seen any news articles which ended up being fake?
+	A1:	Not that I'm aware of
+	A2:	Occasionally
+	A3:	Often
+
+	Fake news masquerading as truthful can seriosuly damage communities. Filter bubbles are partly responsible as they will actively filter that news to people most likely to believe and engage with it [1]. This same filtering could also easily keep any refuation of that fake news from the eyes which need to see it.
+
+	[1] https://blog.dataiku.com/fake-news-and-filter-bubbles
+
+Q5:
+Have you noticed increasing political polarization?
+	A1:	Absolutely
+	A2:	I've seen hints of it
+	A3:	Not at all
+
+	Political polarization is the distancing of people from political common ground. It happens when people isolate themselves from the other side causing a gradual drift towards the extremes of the political spectrum [1]. At the extremes, the "Unite the Right" march in Fergusson to promote facism and anti-semetism [2] and Antifa promoting violence and perpetuating violence against republican voices [3]. It takes a fresh perspective to steer communities away from the extremes and those perspectives can be hard to find when the people you interact with all agree with you.
+
+	[1] https://arxiv.org/pdf/1602.05642.pdf
+	[2] https://www.nytimes.com/2018/08/12/us/politics/charlottesville-va-protest-unite-the-right.html
+	[3] http://www.bostonherald.com/news/local_coverage/2018/11/antifa_protest_at_tucker_carlsons_home_stirs_outrage

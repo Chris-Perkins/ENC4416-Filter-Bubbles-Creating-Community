@@ -1,0 +1,36 @@
+Strongest arguments:
+	fosters community
+	keeps stuff you disagree with away
+	keeps hate away
+	allows you to gradually change opinion over time
+	restricts range of content shown to be digestable
+
+Q3:
+Have you ever gradually changed your opinion on a topic?
+	A1:	Never
+	A2:	Its happened before
+	A3: All the time
+
+	When it comes to changing opinions, people do it very slowly. In fact, being exposed to an opinion far from their own will is not as convincing as an opinion close to their own [1]. The solution to changing minds is to do it slowly which is why filter bubbles can be so helpful. They restrict the range of opinions people are exposed to allowing users to gradually drift left or right rather than become horrified by the extremes of that topic. Luckily there is a wide range of content which could get you between any 2 opinions in slow steps [2]. 
+
+	[1] https://heleo.com/facts-dont-change-peoples-minds-heres/16242/
+	[2] https://www.technologyreview.com/s/611807/this-is-what-filter-bubbles-actually-look-like/
+
+Q4:
+How many diferent news sources do you regularly check and read?
+	A1:	Most of the time, 1 or 2 sources
+	A2:	3 to 4 sources
+	A3:	Five or more sources
+
+	Most people get their news from 5 or more sources [1]. Additionally, because most news sources are biased in some way, people prefer to get their news from a source which supports their core values [2]. Filter bubbles help people find a variety of news sources which they can agree with instead of having to search tons of articles. Additionally, as long as people make use of many sources, the chances that they can be fooled by fake news are small.
+
+	[1] https://www.americanpressinstitute.org/publications/reports/survey-research/how-americans-get-news/
+	[2] https://policyreview.info/articles/analysis/should-we-worry-about-filter-bubbles
+
+Q5:
+If you wanted to reduce the effects of filter bubbles, how would you do it?
+	A1:	Occasionally show people content which you know they will disagree with
+	A2:	Show people completely random content
+	A3:	Show people center-leaning content
+
+	Unfortunately, none of these solutions will work to curb the effects of filter bubbles. A will cause people to become more set in their beliefs because when opposed to drastically differing opinions, people will become more set in their own. B won't work because if you show people content from random sources, there's a good chance you won't be showing them what they want to see. As an example, a liberal doesn't want to read an Info Wars article and a conservative doesn't care for Huffington Post articles. C won't work because the "center" is impossible to objectively define. The center in US politics is very diferent from the center in Swedish politics or the center in Israeli politics. Also everyone will have a diferent opinion about where those centers even are.

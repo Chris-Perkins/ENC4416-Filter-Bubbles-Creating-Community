@@ -1,0 +1,23 @@
+Q1:
+How much do you know about filter bubbles?
+	A1:	I haven't heard of them
+	A2:	I know very little about them
+	A2:	I know a lot about filter bubbles
+
+Q2:
+Do you support the use of filter bubbles on various platforms?
+	A1:	They are mostly a good thing
+	A2:	They have positives and negatives
+	A3:	They have mainly drawbacks
+
+Q1A1 & Q2A1	->	IgnorantPro
+Q1A1 & Q2A2	->	Neutral
+Q1A1 & Q2A3	->	IgnorantAnti
+
+Q1A2 & Q2A1	->	IgnorantPro
+Q1A2 & Q2A2	->	Neutral
+Q1A2 & Q2A3	->	IgnorantAnti
+
+Q1A3 & Q2A1	->	KnowledgeablePro
+Q1A3 & Q2A2	->	Neutral
+Q1A3 & Q2A3	->	KnowledgeableAnti

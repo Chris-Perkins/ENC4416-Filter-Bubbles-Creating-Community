@@ -1,0 +1,32 @@
+Q3:
+How much do you know about the "Incel" community?
+	A1:	Nothing
+	A2:	I've heard of them but don't know much
+	A3:	I'm familiar with them
+
+	The "Incel" community is an excellent example of what can happen when people are isolated from others by being put into a bubble. Incels are misogonistic men who for whatever reason can't find women who want to have sex with them. Their response to this is to blame females for being shallow rather than look inwards at their extremely unhealthy attitudes. This community has gradually radicalized itself due to its isolation and developed increasingly extreme opinions. Multiple mass shooters have been self-reported incels. [1]
+
+	[1] https://www.vox.com/world/2018/4/25/17277496/incel-toronto-attack-alek-minassian
+
+Q4:
+Have you ever been to 4chan's /pol board?
+	A1:	No
+	A2:	I've looked out of curiosity
+	A3:	I'm a regular
+
+	When tiny communities are isolated in bubbles (be it be by filter bubbles or human behavior itself), that community may end up radicalizing [1]. Extreme voices are the loudest and calls for self-reflection can often be drowned out [2]. Without outside intervention, you may end up with the development of all kinds of evils including (on just 4chan's /pol board): Anti-Semetism, Nazism, racism, misogony, etc.
+
+	[1] https://arxiv.org/pdf/1602.05642.pdf
+	[2] https://www.technologyreview.com/s/611807/this-is-what-filter-bubbles-actually-look-like/
+
+Q5:
+Have you noticed increasing political polarization?
+	A1:	Absolutely
+	A2:	I've seen hints of it
+	A3:	Not at all
+
+	Political polarization is the distancing of people from political common ground. It happens when people isolate themselves from the other side causing a gradual drift towards the extremes of the political spectrum [1]. At the extremes, the "Unite the Right" march in Fergusson to promote facism and anti-semetism [2] and Antifa promoting violence and perpetuating violence against republican voices [3]. It takes a fresh perspective to steer communities away from the extremes and those perspectives can be hard to find when the people you interact with all agree with you.
+
+	[1] https://arxiv.org/pdf/1602.05642.pdf
+	[2] https://www.nytimes.com/2018/08/12/us/politics/charlottesville-va-protest-unite-the-right.html
+	[3] http://www.bostonherald.com/news/local_coverage/2018/11/antifa_protest_at_tucker_carlsons_home_stirs_outrage

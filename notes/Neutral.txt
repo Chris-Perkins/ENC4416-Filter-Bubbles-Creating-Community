@@ -1,0 +1,27 @@
+Q3:
+How many diferent news sources do you regularly check and read?
+	A1:	Most of the time, 1 or 2 sources
+	A2:	3 to 4 sources
+	A3:	Five or more sources
+
+	Most people get their news from a number of ideologically similar sources [1]. In other words, people like hearing opinions they agree with. It isn't ideal if your goal is to push everyone to the center, but no amount of changing algorithms will sudenly make people want to hear people they disagree with; that is built into human nature.
+
+	[1] https://www.americanpressinstitute.org/publications/reports/survey-research/how-americans-get-news/
+
+Q4:
+If Twitter or Facebook started showed you content you deemed offensive, would you take the time to read it?
+	A1:	Absolutely not
+	A2:	Unlikely
+	A3:	Maybe depending on the content
+
+	Filter bubbles result from algorithms wanting to show people what they will engage with. Their elimination would seriously damage the retention of the people who use that platform. With that in mind, why would any company actively remove their algorithms which keep people engaged and seeing what they want to see? The solution to the extreme content which can sometimes show up on those platforms has so far been to ban that content rather than adjust algorithms to keep it away from people who don't like it [1].
+
+Q5:
+Are you a part of any niche online communities?
+	A1:	Nope
+	A2: 1 or 2
+	A3:	Quite a few
+
+	Filter bubbles are known to help foster particularly niche communities by showing people with similar interests similar things [1]. They also help people with that niche interest find eachother, building a community. This can result in healthy communities like the various subreddits dedicated to loving animals or to unhealthy communities like a few political subreddits (which tend to become extreme quickly).
+
+	[1] https://web.wpi.edu/Pubs/E-project/Available/E-project-011817-125559/unrestricted/MusicDiscoveryIQP_Report_12.21.16.pdf
