@@ -1,4 +1,5 @@
 import * as React from "react";
+import { filterBubbleTheme } from "../filterBubbleTheme";
 
 const titleContainerStyle = {
     textAlign: "center" as "center",
@@ -10,12 +11,12 @@ const titleContainerStyle = {
 const titleTextStyle = {
     fontSize: "12vh",
     fontWeight: "bold" as "bold",
-    color:"#FFFFFF"
+    color: filterBubbleTheme.palette.primary.contrastText
 };
 
 const subtitleTextStyle = {
     fontSize: "6vh",
-    color:"#FFFFFF"
+    color: filterBubbleTheme.palette.primary.contrastText
 };
 
 const infoTextStyle = {
@@ -24,7 +25,7 @@ const infoTextStyle = {
     marginLeft: "5.0%",
     marginRight: "5.0%",
     marginTop: "2.0%",
-    color:"#FFFFFF"
+    color: filterBubbleTheme.palette.primary.contrastText
 };
 
 export class InfoBlock extends React.Component {
