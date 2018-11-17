@@ -6,6 +6,7 @@ import { filterBubbleTheme } from "../filterBubbleTheme";
 
 const quizQuestionStyle = {
     width: "100%",
+    height: "19%",
     paddingLeft: "3.5%",
     paddingRight: "3.5%",
     paddingTop: "1%",

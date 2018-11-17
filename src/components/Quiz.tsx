@@ -5,9 +5,10 @@ import { Button, MuiThemeProvider } from "@material-ui/core";
 
 const pageStyle = {
     marginTop:"5%",
+    marginBottom: "5%",
     marginLeft:"10%",
     width: "80%",
-    maxHeight:"95%",
+    height:"90%",
     position:"absolute" as "absolute",
 };
 
@@ -29,11 +30,24 @@ const quizHeader = {
 
 const nextQuestionButtonStyle = {
     width: "100%",
+    height: "14%",
     marginTop: "1%",
     fontSize: "2.5vh"
 };
 
-export class Quiz extends React.Component {
+export class Quiz extends React.Component<{}, {
+    question: string, selectedContainerIndex: null, options: [string, string, string]}> {
+
+    constructor(args) {
+        super(args);
+
+        this.state = {
+            question: "How good are doggy dogs?",
+            selectedContainerIndex: null,
+            options: ["test", "one", "two"]
+        };
+    }
+
     render() {
         return (
             <div style={pageStyle}>
@@ -41,17 +55,13 @@ export class Quiz extends React.Component {
                     <div style ={quizTitleInfo}>
                         PROMPT 1 OF 4
                     </div>
-                    How do you feel about doggie dogs?
+                    {this.state.question}
                 </div>
-                <QuizQuestion>
-                    good
-                </QuizQuestion>
-                <QuizQuestion>
-                    ok
-                </QuizQuestion>
-                <QuizQuestion>
-                    bad
-                </QuizQuestion>
+                { this.state.options.map(val => (
+                    <QuizQuestion>
+                        {val}
+                    </QuizQuestion>
+                ))}
                 <MuiThemeProvider theme={filterBubbleTheme}>
                     <Button style={nextQuestionButtonStyle} variant="contained" color="secondary">
                         Next Question
