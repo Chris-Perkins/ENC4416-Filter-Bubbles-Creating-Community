@@ -1,5 +1,6 @@
 import * as React from "react";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 import { filterBubbleTheme } from "../filterBubbleTheme";
 import { MuiThemeProvider } from "@material-ui/core";
 
@@ -23,9 +24,11 @@ export class QuizButtonContainer extends React.Component {
         return (
             <div style={buttonContainerStyle}>
                 <MuiThemeProvider theme={filterBubbleTheme}>
-                    <Button style={individualButtonStyle} variant="contained" color="secondary"> 
-                        Take The Quiz
-                    </Button>
+                    <Link to="/quiz">
+                        <Button style={individualButtonStyle} variant="contained" color="secondary"> 
+                            Take The Quiz
+                        </Button>
+                    </Link>
                 </MuiThemeProvider>
             </div>
         );
