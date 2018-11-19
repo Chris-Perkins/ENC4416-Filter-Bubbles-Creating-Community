@@ -1,4 +1,6 @@
 import * as React from "react";
+import { observer } from 'mobx-react';
+import { store } from '../store';
 import { filterBubbleTheme } from "../filterBubbleTheme";
 import { QuizQuestion } from "./QuizQuestion";
 import { Button, MuiThemeProvider } from "@material-ui/core";
@@ -35,31 +37,24 @@ const nextQuestionButtonStyle = {
     fontSize: "2.5vh"
 };
 
-export class Quiz extends React.Component<{}, {
-    question: string, selectedContainerIndex: null, options: [string, string, string]}> {
-
-    constructor(args) {
-        super(args);
-
-        this.state = {
-            question: "How good are doggy dogs?",
-            selectedContainerIndex: null,
-            options: ["test", "one", "two"]
-        };
-    }
+@observer
+export class Quiz extends React.Component {
 
     render() {
+        const curQuestion = store.getQuestion();
+        console.log(curQuestion);
+
         return (
             <div style={pageStyle}>
                 <div style={quizHeader}>
                     <div style ={quizTitleInfo}>
                         PROMPT 1 OF 4
                     </div>
-                    {this.state.question}
+                    {curQuestion.prompt}
                 </div>
-                { this.state.options.map(val => (
+                { Object.keys(curQuestion.answers).map(val => (
                     <QuizQuestion>
-                        {val}
+                        {curQuestion.answers[val].response}
                     </QuizQuestion>
                 ))}
                 <MuiThemeProvider theme={filterBubbleTheme}>
