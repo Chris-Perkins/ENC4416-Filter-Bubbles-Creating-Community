@@ -36,6 +36,9 @@ class Store {
      * The recorded ideal is a meaningless `null`
      */
     static questions = {
+        /**
+         * The basic questions that should be asked upon startup.
+         */
         baseQuestions: [
             {
                 prompt: "How would you describe your understanding of 'filter bubbles'?",
@@ -68,6 +71,9 @@ class Store {
                 ]
             }
         ],
+        /**
+         * Questions that should be asked if the user is ignorant of filter bubbles and is against them
+         */
         ignorantAntiQuestions: [
             {
                 prompt: "How much do you know about the \"Incel\" community?",
@@ -121,6 +127,9 @@ class Store {
                 ]
             }
         ],
+        /**
+         * Questions that should be asked if the user is knowledgable and AGAINST filter bubbles.
+         */
         knowledgeableAntiQuestions: [
             {
                 prompt: "How many conspiracy theories have you seen promoted online?",
@@ -174,6 +183,9 @@ class Store {
                 ]
             }
         ],
+        /**
+         * Questions that should be asked if the user is neutral about filter bubbles
+         */
         neutralQuestions: [
             {
                 prompt: "How many diferent news sources do you regularly check and read?",
@@ -227,6 +239,9 @@ class Store {
                 ]
             }
         ],
+        /**
+         * Questions that should be asked if someone is ignorant, but supports filter bubbles.
+         */
         ignorantProQuestions: [
             {
                 prompt: "Are you a part of any niche online communities?\ne.g. a forum for coders, designers, or plumbers",
@@ -280,6 +295,9 @@ class Store {
                 ]
             }
         ],
+        /**
+         * Questions that should be asked if someone is knowledgeable and supportive of filter bubbles.
+         */
         knowledgableProQuestions: [
             {
                 prompt: "Have you ever gradually changed your opinion on a topic?",
@@ -336,6 +354,24 @@ class Store {
     };
 
     /**
+     * Returns whether or not there is a "next" question after the current question that would be returned from `getQuestion`.
+     */
+    hasNextQuestion() {
+        console.log("###");
+        console.log(this.currentQuizChoices.length);
+        // user has not answered all base questions; there is more.
+        // subtract one as the user has yet to answer this question.
+        // note that this would cause an error if the next section is EMPTY. :O
+        // we assume that base has at least one question. :)
+        if (this.currentQuizChoices.length < Store.questions.baseQuestions.length) {
+            return true;
+        }
+
+        // subtract one from the end because the user ALWAYS hasn't answered one question.
+        return this.currentQuizChoices.length - Store.questions.baseQuestions.length < this.getQuestionSection(this.currentQuizChoices).length - 1;
+    }
+
+    /**
      * Gets the next question to be asked given the current quiz choices.
      */
     getQuestion() {
@@ -349,35 +385,62 @@ class Store {
      * @param answers The current answers as indices to the provided questions.
      */
     getQuestionForAnswerChoices(answers) {
-        if (answers.length < 2) {
-            return Store.questions.baseQuestions[answers.length];
+        if (answers.length < Store.questions.baseQuestions.length) {
+            return this.getQuestionSection(answers)[answers.length];
+        }
+        return this.getQuestionSection(answers)[answers.length - Store.questions.baseQuestions.length];
+    }
+
+    /**
+     * Gets the section where questions should be pulled from.
+     * 
+     * If there are not enough answers to fill out the base questions, then return `baseQuestions`.
+     * Otherwise, the following flowchart is followed:
+     * Pro:
+     *  * Knowledgeable:
+     *      * return knowledgeablePro
+     *  * Ignorant:
+     *      * return ignorantPro
+     * Neutral:
+     *  * return neutral
+     * Anti:
+     *  * Knowledgeable:
+     *      * return knowledgeableAnti
+     *  * Ignorant:
+     *      * return ignorantAnti
+     * 
+     * @param answers The answers to all currently answered questions
+     */
+    getQuestionSection(answers) {
+        if (answers.length < Store.questions.baseQuestions.length) {
+            return Store.questions.baseQuestions;
         }
 
         switch (answers[0]) {
             case Store.filterBubbleKnowledgeLabels.ignorant:
                 switch (answers[1]) {
                     case Store.filterBubbleFeelingLabels.pro:
-                        return Store.questions.ignorantProQuestions[answers.length - 2];
+                        return Store.questions.ignorantProQuestions;
                     case Store.filterBubbleFeelingLabels.neutral:
-                        return Store.questions.neutralQuestions[answers.length - 2];
+                        return Store.questions.neutralQuestions;
                     case Store.filterBubbleFeelingLabels.anti:
-                        return Store.questions.ignorantAntiQuestions[answers.length - 2];
+                        return Store.questions.ignorantAntiQuestions;
                     default:
-                        return Store.questions.neutralQuestions[answers.length - 2];
+                        return Store.questions.neutralQuestions;
                 }
             case Store.filterBubbleKnowledgeLabels.ignorant:
                 switch (answers[1]) {
                     case Store.filterBubbleFeelingLabels.pro:
-                        return Store.questions.knowledgableProQuestions[answers.length - 2];
+                        return Store.questions.knowledgableProQuestions;
                     case Store.filterBubbleFeelingLabels.neutral:
-                        return Store.questions.neutralQuestions[answers.length - 2];
+                        return Store.questions.neutralQuestions;
                     case Store.filterBubbleFeelingLabels.anti:
-                        return Store.questions.ignorantAntiQuestions[answers.length - 2];
+                        return Store.questions.ignorantAntiQuestions;
                     default:
-                        return Store.questions.neutralQuestions[answers.length - 2];
+                        return Store.questions.neutralQuestions;
                 }
             default:
-                return Store.questions.neutralQuestions[answers.length - 2];
+                return Store.questions.neutralQuestions;
         }
     }
 

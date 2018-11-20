@@ -40,9 +40,17 @@ const nextQuestionButtonStyle = {
 @observer
 export class Quiz extends React.Component {
 
+    saveQuizChoice() {
+        if (store.hasNextQuestion()) {
+            store.currentQuizChoices.push(store.getQuestion().answers[0].ideal);
+        } else {
+            console.log("FINISH!");
+        }
+    }
+
     render() {
         const curQuestion = store.getQuestion();
-        console.log(curQuestion);
+        const buttonLabelText = store.hasNextQuestion() ? "Next Question" : "Submit Quiz";
 
         return (
             <div style={pageStyle}>
@@ -58,8 +66,8 @@ export class Quiz extends React.Component {
                     </QuizQuestion>
                 ))}
                 <MuiThemeProvider theme={filterBubbleTheme}>
-                    <Button style={nextQuestionButtonStyle} variant="contained" color="secondary">
-                        Next Question
+                    <Button style={nextQuestionButtonStyle} variant="contained" color="secondary" onClick={this.saveQuizChoice}>
+                        {buttonLabelText}
                     </Button>
                 </MuiThemeProvider>
             </div>
