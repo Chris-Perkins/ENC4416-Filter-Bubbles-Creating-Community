@@ -38,7 +38,22 @@ const nextQuestionButtonStyle = {
     fontSize: "2.5vh"
 };
 
-const quizQuestionStyle = {
+const defaultQuizAnswerStyle = {
+    width: "99%",
+    marginLeft: "0.5%",
+    height: "19%",
+    paddingLeft: "3.5%",
+    paddingRight: "3.5%",
+    paddingTop: "1%",
+    paddingBottom: "1%",
+    fontSize: "3.5vh",
+    marginTop: "1px",
+    borderRadius: "3px",
+    backgroundColor: "#f1f1f1",
+    color: "#000000"
+};
+
+const selectedQuizPromptStyle = {
     width: "100%",
     height: "19%",
     paddingLeft: "3.5%",
@@ -48,9 +63,8 @@ const quizQuestionStyle = {
     fontSize: "3.5vh",
     marginTop: "1px",
     borderRadius: "3px",
-
-    backgroundColor: "#f1f1f1",
-    color: "#000000"
+    color: "#000000",
+    backgroundColor: "#5ddef4"
 };
 
 /**
@@ -102,7 +116,7 @@ export class Quiz extends React.Component {
                     {curQuestion.prompt}
                 </div>
                 { Object.keys(curQuestion.answers).map(val => (
-                    <CardActionArea style={quizQuestionStyle} onClick={() => { this.updateAnswerSelection(val); }}>
+                    <CardActionArea style={currentAnswerSelection === val ? selectedQuizPromptStyle : defaultQuizAnswerStyle} onClick={() => { this.updateAnswerSelection(val); }}>
                         <CardContent>
                             {curQuestion.answers[val].response}
                         </CardContent>
