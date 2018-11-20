@@ -1,6 +1,9 @@
 import * as React from "react";
+import { observer } from 'mobx-react';
+import { store } from '../store';
 import { filterBubbleTheme } from "../filterBubbleTheme";
-import { QuizQuestion } from "./QuizQuestion";
+import CardContent from "@material-ui/core/CardContent";
+import { CardActionArea } from "../../node_modules/@material-ui/core";
 import { Button, MuiThemeProvider } from "@material-ui/core";
 
 const pageStyle = {
@@ -35,36 +38,93 @@ const nextQuestionButtonStyle = {
     fontSize: "2.5vh"
 };
 
-export class Quiz extends React.Component<{}, {
-    question: string, selectedContainerIndex: null, options: [string, string, string]}> {
+const defaultQuizAnswerStyle = {
+    width: "99%",
+    marginLeft: "0.5%",
+    height: "19%",
+    paddingLeft: "3.5%",
+    paddingRight: "3.5%",
+    paddingTop: "1%",
+    paddingBottom: "1%",
+    fontSize: "3.5vh",
+    marginTop: "1px",
+    borderRadius: "3px",
+    backgroundColor: "#f1f1f1",
+    color: "#000000"
+};
 
-    constructor(args) {
-        super(args);
+const selectedQuizPromptStyle = {
+    width: "100%",
+    height: "19%",
+    paddingLeft: "3.5%",
+    paddingRight: "3.5%",
+    paddingTop: "1%",
+    paddingBottom: "1%",
+    fontSize: "3.5vh",
+    marginTop: "1px",
+    borderRadius: "3px",
+    color: "#000000",
+    backgroundColor: "#5ddef4"
+};
 
-        this.state = {
-            question: "How good are doggy dogs?",
-            selectedContainerIndex: null,
-            options: ["test", "one", "two"]
-        };
+/**
+ * The current user-defined response INDEX to the currently prompted quiz question.
+ */
+let currentAnswerSelection = null;
+
+@observer
+export class Quiz extends React.Component {
+
+    /**
+     * Updates the current answer selection to the provided index. Forces a re-render.
+     * 
+     * @param index The index that was selected.
+     */
+    updateAnswerSelection(index) {
+        currentAnswerSelection = index;
+
+        this.forceUpdate();
+    }
+
+    /**
+     * Pushes the current answer's ideal selection to the store's ideal choices.
+     */
+    saveQuizChoice() {
+        if (currentAnswerSelection == null) {
+            // Do nothing; there is nothing to save!
+            return;
+        }
+
+        console.log(currentAnswerSelection);
+        if (store.hasNextQuestion()) {
+            store.currentQuizChoices.push(store.getQuestion().answers[currentAnswerSelection].ideal);
+        }
+
+        currentAnswerSelection = null;
     }
 
     render() {
+        const curQuestion = store.getQuestion();
+        const buttonLabelText = store.hasNextQuestion() ? "Next Question" : "Submit Quiz";
+
         return (
             <div style={pageStyle}>
                 <div style={quizHeader}>
                     <div style ={quizTitleInfo}>
-                        PROMPT 1 OF 4
+                        {"Prompt " + (store.currentQuizChoices.length + 1) + " of 5" /*Ideally this wouldn't be hard-coded. But I'm treating this as a hackathon project LUL*/}
                     </div>
-                    {this.state.question}
+                    {curQuestion.prompt}
                 </div>
-                { this.state.options.map(val => (
-                    <QuizQuestion>
-                        {val}
-                    </QuizQuestion>
+                { Object.keys(curQuestion.answers).map(val => (
+                    <CardActionArea style={currentAnswerSelection === val ? selectedQuizPromptStyle : defaultQuizAnswerStyle} onClick={() => { this.updateAnswerSelection(val); }}>
+                        <CardContent>
+                            {curQuestion.answers[val].response}
+                        </CardContent>
+                    </CardActionArea>
                 ))}
                 <MuiThemeProvider theme={filterBubbleTheme}>
-                    <Button style={nextQuestionButtonStyle} variant="contained" color="secondary">
-                        Next Question
+                    <Button style={nextQuestionButtonStyle} variant="contained" color="secondary" onClick={this.saveQuizChoice} disabled={currentAnswerSelection == null}>
+                        {buttonLabelText}
                     </Button>
                 </MuiThemeProvider>
             </div>
