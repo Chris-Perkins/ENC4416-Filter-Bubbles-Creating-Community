@@ -4,7 +4,7 @@ How much do you know about the "Incel" community?
 	A2:	I've heard of them but don't know much
 	A3:	I'm familiar with them
 
-	The "Incel" community is an excellent example of what can happen when people are isolated from others by being put into a bubble. Incels are misogonistic men who for whatever reason can't find women who want to have sex with them. Their response to this is to blame females for being shallow rather than look inwards at their extremely unhealthy attitudes. This community has gradually radicalized itself due to its isolation and developed increasingly extreme opinions. Multiple mass shooters have been self-reported incels. [1]
+	The "Incel" community is an excellent example of what can happen when people are isolated from others by being put into a bubble. Incels are misogonistic men who for whatever reason don’t have any luck with female relationships. Their response to this is to blame females for being too shallow rather than looking inwards at their extremely unhealthy attitudes which drive everyone away. This community has gradually radicalized itself due to its isolation and developed increasingly extreme opinions. Multiple mass shooters have been self-reported incels. [1]
 
 	[1] https://www.vox.com/world/2018/4/25/17277496/incel-toronto-attack-alek-minassian
 
@@ -14,7 +14,7 @@ Have you ever been to 4chan's /pol board?
 	A2:	I've looked out of curiosity
 	A3:	I'm a regular
 
-	When tiny communities are isolated in bubbles (be it be by filter bubbles or human behavior itself), that community may end up radicalizing [1]. Extreme voices are the loudest and calls for self-reflection can often be drowned out [2]. Without outside intervention, you may end up with the development of all kinds of evils including (on just 4chan's /pol board): Anti-Semetism, Nazism, racism, misogony, etc.
+	When tiny communities are isolated in bubbles (be it be by filter bubbles or human behavior itself), that community may end up radicalizing [1]. Extreme voices are the loudest and calls for self-reflection can often be drowned out [2]. Without outside intervention, you may end up with the development of all kinds of nasty behavior the internet is famous for.
 
 	[1] https://arxiv.org/pdf/1602.05642.pdf
 	[2] https://www.technologyreview.com/s/611807/this-is-what-filter-bubbles-actually-look-like/

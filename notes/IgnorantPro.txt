@@ -4,7 +4,7 @@ Have you ever found a niche community on an online platform?
 	A2:	I've seen a few
 	A3:	I'm a part of one or more
 
-	Filter bubbles are known to help foster particularly niche communities by showing people with similar interests similar things [1]. They also help people with that niche interest find eachother, building a community. One example are all the communities around the various aspects of Minecraft. Youtube and Reddit bubble together similar content helping to form multiple redstone communities, building communities, pvp communities, etc.
+	Filter bubbles are known to help foster particularly niche communities by showing people with similar interests similar things [1]. They also help people with that niche interest find each other, building a community. On Youtube, for example, videos are organized and recommended to people based on similar how similar those videos are and how often someone would watch one video after another. This filtering helped create all the communities on Youtube
 
 	[1] https://web.wpi.edu/Pubs/E-project/Available/E-project-011817-125559/unrestricted/MusicDiscoveryIQP_Report_12.21.16.pdf
 
