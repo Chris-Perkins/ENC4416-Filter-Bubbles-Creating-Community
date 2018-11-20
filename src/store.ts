@@ -357,8 +357,6 @@ class Store {
      * Returns whether or not there is a "next" question after the current question that would be returned from `getQuestion`.
      */
     hasNextQuestion() {
-        console.log("###");
-        console.log(this.currentQuizChoices.length);
         // user has not answered all base questions; there is more.
         // subtract one as the user has yet to answer this question.
         // note that this would cause an error if the next section is EMPTY. :O

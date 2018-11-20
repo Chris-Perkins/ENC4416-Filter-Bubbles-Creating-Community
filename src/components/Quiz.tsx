@@ -2,7 +2,8 @@ import * as React from "react";
 import { observer } from 'mobx-react';
 import { store } from '../store';
 import { filterBubbleTheme } from "../filterBubbleTheme";
-import { QuizQuestion } from "./QuizQuestion";
+import CardContent from "@material-ui/core/CardContent";
+import { CardActionArea } from "../../node_modules/@material-ui/core";
 import { Button, MuiThemeProvider } from "@material-ui/core";
 
 const pageStyle = {
@@ -37,15 +38,55 @@ const nextQuestionButtonStyle = {
     fontSize: "2.5vh"
 };
 
+const quizQuestionStyle = {
+    width: "100%",
+    height: "19%",
+    paddingLeft: "3.5%",
+    paddingRight: "3.5%",
+    paddingTop: "1%",
+    paddingBottom: "1%",
+    fontSize: "3.5vh",
+    marginTop: "1px",
+    borderRadius: "3px",
+
+    backgroundColor: "#f1f1f1",
+    color: "#000000"
+};
+
+/**
+ * The current user-defined response INDEX to the currently prompted quiz question.
+ */
+let currentAnswerSelection = null;
+
 @observer
 export class Quiz extends React.Component {
 
+    /**
+     * Updates the current answer selection to the provided index. Forces a re-render.
+     * 
+     * @param index The index that was selected.
+     */
+    updateAnswerSelection(index) {
+        currentAnswerSelection = index;
+
+        this.forceUpdate();
+    }
+
+    /**
+     * Pushes the current answer's ideal selection to the store's ideal choices.
+     */
     saveQuizChoice() {
-        if (store.hasNextQuestion()) {
-            store.currentQuizChoices.push(store.getQuestion().answers[0].ideal);
-        } else {
-            console.log("FINISH!");
+        if (currentAnswerSelection == null) {
+            // Do nothing; there is nothing to save!
+            return;
         }
+
+        console.log(currentAnswerSelection);
+        if (store.hasNextQuestion()) {
+            store.currentQuizChoices.push(store.getQuestion().answers[currentAnswerSelection].ideal);
+        }
+
+        currentAnswerSelection = null;
     }
 
     render() {
@@ -61,12 +102,14 @@ export class Quiz extends React.Component {
                     {curQuestion.prompt}
                 </div>
                 { Object.keys(curQuestion.answers).map(val => (
-                    <QuizQuestion>
-                        {curQuestion.answers[val].response}
-                    </QuizQuestion>
+                    <CardActionArea style={quizQuestionStyle} onClick={() => { this.updateAnswerSelection(val); }}>
+                        <CardContent>
+                            {curQuestion.answers[val].response}
+                        </CardContent>
+                    </CardActionArea>
                 ))}
                 <MuiThemeProvider theme={filterBubbleTheme}>
-                    <Button style={nextQuestionButtonStyle} variant="contained" color="secondary" onClick={this.saveQuizChoice}>
+                    <Button style={nextQuestionButtonStyle} variant="contained" color="secondary" onClick={this.saveQuizChoice} disabled={currentAnswerSelection == null}>
                         {buttonLabelText}
                     </Button>
                 </MuiThemeProvider>
