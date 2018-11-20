@@ -111,7 +111,7 @@ export class Quiz extends React.Component {
             <div style={pageStyle}>
                 <div style={quizHeader}>
                     <div style ={quizTitleInfo}>
-                        PROMPT 1 OF 4
+                        {"Prompt " + (store.currentQuizChoices.length + 1) + " of 5" /*Ideally this wouldn't be hard-coded. But I'm treating this as a hackathon project LUL*/}
                     </div>
                     {curQuestion.prompt}
                 </div>
