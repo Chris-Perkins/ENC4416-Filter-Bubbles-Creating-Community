@@ -5,6 +5,7 @@ import { filterBubbleTheme } from "../filterBubbleTheme";
 import CardContent from "@material-ui/core/CardContent";
 import { CardActionArea } from "../../node_modules/@material-ui/core";
 import { Button, MuiThemeProvider } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const pageStyle = {
     marginTop:"5%",
@@ -35,7 +36,8 @@ const nextQuestionButtonStyle = {
     width: "100%",
     height: "14%",
     marginTop: "1%",
-    fontSize: "2.5vh"
+    fontSize: "2.5vh",
+    marginBottom: "2.5%"
 };
 
 const defaultQuizAnswerStyle = {
@@ -95,10 +97,8 @@ export class Quiz extends React.Component {
             return;
         }
 
-        console.log(currentAnswerSelection);
-        if (store.hasNextQuestion()) {
-            store.currentQuizChoices.push(store.getQuestion().answers[currentAnswerSelection].ideal);
-        }
+        store.currentQuizChoices.push(store.getQuestion().answers[currentAnswerSelection].ideal);
+        console.log(store.currentQuizChoices);
 
         currentAnswerSelection = null;
     }
@@ -106,6 +106,16 @@ export class Quiz extends React.Component {
     render() {
         const curQuestion = store.getQuestion();
         const buttonLabelText = store.hasNextQuestion() ? "Next Question" : "Submit Quiz";
+
+        let wrappedButton = 
+            <MuiThemeProvider theme={filterBubbleTheme}>
+                <Button style={nextQuestionButtonStyle} variant="contained" color="secondary" onClick={this.saveQuizChoice} disabled={currentAnswerSelection == null}>
+                    {buttonLabelText}
+                </Button>
+            </MuiThemeProvider>;
+        if (!store.hasNextQuestion()) {
+            wrappedButton = <Link to="/postQuiz">{wrappedButton}</Link>;
+        }
 
         return (
             <div style={pageStyle}>
@@ -122,11 +132,7 @@ export class Quiz extends React.Component {
                         </CardContent>
                     </CardActionArea>
                 ))}
-                <MuiThemeProvider theme={filterBubbleTheme}>
-                    <Button style={nextQuestionButtonStyle} variant="contained" color="secondary" onClick={this.saveQuizChoice} disabled={currentAnswerSelection == null}>
-                        {buttonLabelText}
-                    </Button>
-                </MuiThemeProvider>
+                {wrappedButton}
             </div>
         );
     }

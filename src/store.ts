@@ -58,7 +58,7 @@ class Store {
                 answers: [
                     {
                         response: "Filtering content has mainly drawbacks",
-                        ideal: Store.filterBubbleFeelingLabels.pro
+                        ideal: Store.filterBubbleFeelingLabels.anti
                     },
                     {
                         response: "Filtering content has both positives and negatives", 
@@ -66,7 +66,7 @@ class Store {
                     },
                     {
                         response: "Filtering content is mostly a good thing",
-                        ideal: Store.filterBubbleFeelingLabels.anti
+                        ideal: Store.filterBubbleFeelingLabels.pro
                     }
                 ]
             }
