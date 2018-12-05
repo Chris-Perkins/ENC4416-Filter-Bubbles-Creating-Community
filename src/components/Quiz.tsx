@@ -91,7 +91,8 @@ const popupInfoDialogStyle = {
     position: "absolute" as "absolute",
     backgroundColor: "#303030",
     marginBottom: "10%",
-    zIndex: 2
+    zIndex: 2,
+    borderRadius: "3px"
 };
 
 const infoTextStyle = {
@@ -212,7 +213,7 @@ export class Quiz extends React.Component {
 
             infoScreenValue = 
                 <Container>
-                    <CardContent style={popupInfoDialogStyle}>
+                    <div style={popupInfoDialogStyle}>
                         <div style={infoTextStyle}>
                             {store.getQuestion().postSubmitResponse}
                         </div>
@@ -226,7 +227,7 @@ export class Quiz extends React.Component {
                             ))}
                             {infoNextButton}
                         </MuiThemeProvider>
-                    </CardContent>
+                    </div>
                     <div style={pageBlurStyle} />
                 </Container>;
         }
