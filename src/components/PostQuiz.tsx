@@ -130,7 +130,7 @@ export class PostQuiz extends React.Component {
                     <br />
                     <ol>
                         <li>Find what might engage the user based on previous history</li>
-                        <li>Re-inforce or challenge a belief directly</li>
+                        <li>Reinforce or challenge a held belief</li>
                     </ol>
                     <br />
                     By curating content to you, we formed a pseudo-community around your beliefs. Filter bubbles often build themselves in particularly niche communities. For instance, a filter bubble may be used to separate those who code and those who dance.

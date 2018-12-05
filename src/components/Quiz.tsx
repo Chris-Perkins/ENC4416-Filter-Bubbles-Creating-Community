@@ -6,6 +6,9 @@ import CardContent from "@material-ui/core/CardContent";
 import { CardActionArea } from "../../node_modules/@material-ui/core";
 import { Button, MuiThemeProvider } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { observable } from "mobx";
+import zIndex from "@material-ui/core/styles/zIndex";
+import Container from "reactstrap/lib/Container";
 
 const pageStyle = {
     marginTop:"5%",
@@ -61,7 +64,7 @@ const selectedQuizPromptStyle = {
     paddingLeft: "3.5%",
     paddingRight: "3.5%",
     paddingTop: "1%",
-    paddingBottom: "1%",
+    paddingBottom: "2%",
     fontSize: "3.5vh",
     marginTop: "1px",
     borderRadius: "3px",
@@ -69,13 +72,91 @@ const selectedQuizPromptStyle = {
     backgroundColor: "#5ddef4"
 };
 
+const pageBlurStyle = {
+    top: "0%",
+    left: "0%",
+    right: "0%",
+    bottom: "0%",
+    position: "fixed" as "fixed",
+    backgroundColor: "rgba(0, 76, 140, 0.4)",
+    zIndex: 1
+};
+
+const popupInfoDialogStyle = {
+    width: "90%",
+    left: "5%",
+    top: "10%",
+    padding: "5%",
+    paddingBottom: "1%",
+    position: "absolute" as "absolute",
+    backgroundColor: "#303030",
+    marginBottom: "10%",
+    zIndex: 2
+};
+
+const infoTextStyle = {
+    width: "100%",
+    minHeight: "80%",
+    left: "5%",
+    top: "5%",
+    marginBottom: "5%",
+    color: "#ffffff",
+    fontSize: "2vh",
+    overflow: "auto" as "auto"
+};
+
+const infoButtonStyle = {
+    width: "80%",
+    height: "14%",
+    left: "10%",
+    marginTop: "3%",
+    fontSize: "2.5vh",
+};
+
+const sourceButtons = {
+    width: "70%",
+    left: "15%",
+    fontSize: "2vh",
+    height: "10%",
+    marginTop: "1%",
+    marginBottom: "1%"
+};
+
 /**
  * The current user-defined response INDEX to the currently prompted quiz question.
  */
-let currentAnswerSelection = null;
 
 @observer
 export class Quiz extends React.Component {
+
+    @observable isPushingResponse = false;
+    @observable currentAnswerSelection = null;
+
+    constructor(props, context) {
+        super(props, context);
+
+        this.nextButtonPressed = this.nextButtonPressed.bind(this);
+        this.updateAnswerSelection = this.updateAnswerSelection.bind(this);
+        this.saveQuizChoice = this.saveQuizChoice.bind(this);
+    }
+
+    /**
+     * Handles "Next" button behavior. 
+     * If there is a response, then show a pop-up explaining the response (via component did mount). 
+     * If there is not a response, skip straight to the next question.
+     */
+    nextButtonPressed() {
+        if (this.currentAnswerSelection == null) {
+            // Do nothing; there is nothing to save.
+            return;
+        }
+
+        if (store.getQuestion().postSubmitResponse == null) {
+            this.saveQuizChoice();
+        } else {
+            this.isPushingResponse = true;
+        }
+    }
 
     /**
      * Updates the current answer selection to the provided index. Forces a re-render.
@@ -83,38 +164,71 @@ export class Quiz extends React.Component {
      * @param index The index that was selected.
      */
     updateAnswerSelection(index) {
-        currentAnswerSelection = index;
-
-        this.forceUpdate();
+        this.currentAnswerSelection = index;
     }
 
     /**
-     * Pushes the current answer's ideal selection to the store's ideal choices.
+     * Pushes the current answer's ideal selection to the store's ideal choices. If the current choice is null, do nothing.
      */
     saveQuizChoice() {
-        if (currentAnswerSelection == null) {
+        if (this.currentAnswerSelection == null) {
             // Do nothing; there is nothing to save!
             return;
         }
 
-        store.currentQuizChoices.push(store.getQuestion().answers[currentAnswerSelection].ideal);
-        console.log(store.currentQuizChoices);
+        store.currentQuizChoices.push(store.getQuestion().answers[this.currentAnswerSelection].ideal);
 
-        currentAnswerSelection = null;
+        this.currentAnswerSelection = null;
+        this.isPushingResponse = false;
     }
 
     render() {
         const curQuestion = store.getQuestion();
-        const buttonLabelText = store.hasNextQuestion() ? "Next Question" : "Submit Quiz";
+        const buttonLabelText = store.hasNextQuestion() ? "Submit Response" : "Submit Quiz";
 
         let wrappedButton = 
             <MuiThemeProvider theme={filterBubbleTheme}>
-                <Button style={nextQuestionButtonStyle} variant="contained" color="secondary" onClick={this.saveQuizChoice} disabled={currentAnswerSelection == null}>
+                <Button style={nextQuestionButtonStyle} variant="contained" color="secondary" onClick={this.nextButtonPressed} 
+                        disabled={this.currentAnswerSelection == null || this.isPushingResponse}>
                     {buttonLabelText}
                 </Button>
             </MuiThemeProvider>;
-        if (!store.hasNextQuestion()) {
+        if (!store.hasNextQuestion() && store.getQuestion().postSubmitResponse == null) {
             wrappedButton = <Link to="/postQuiz">{wrappedButton}</Link>;
+        }
+
+        let infoScreenValue = <br />;
+        if (this.isPushingResponse) {
+            const sources = store.getQuestion().sources;
+
+            let infoNextButton = 
+                <Button style={infoButtonStyle} variant="contained" color="secondary" onClick={this.saveQuizChoice} >
+                    {store.hasNextQuestion() ? "Next Question" : "Finish Quiz"}
+                </Button>;
+
+            if (!store.hasNextQuestion()) {
+                infoNextButton = <Link to="/postQuiz">{infoNextButton}</Link>;
+            }
+
+            infoScreenValue = 
+                <Container>
+                    <CardContent style={popupInfoDialogStyle}>
+                        <div style={infoTextStyle}>
+                            {store.getQuestion().postSubmitResponse}
+                        </div>
+                        <MuiThemeProvider theme={filterBubbleTheme}>
+                            {Object.keys(sources).map((val, index) => (
+                                <a href={sources[val]} target="_blank">
+                                    <Button style={sourceButtons} color="secondary">
+                                        {"[ Source " + (index + 1) + " ]"}
+                                    </Button>
+                                </a>
+                            ))}
+                            {infoNextButton}
+                        </MuiThemeProvider>
+                    </CardContent>
+                    <div style={pageBlurStyle} />
+                </Container>;
         }
 
         return (
@@ -126,13 +240,15 @@ export class Quiz extends React.Component {
                     {curQuestion.prompt}
                 </div>
                 { Object.keys(curQuestion.answers).map(val => (
-                    <CardActionArea style={currentAnswerSelection === val ? selectedQuizPromptStyle : defaultQuizAnswerStyle} onClick={() => { this.updateAnswerSelection(val); }}>
+                    <CardActionArea disabled={this.isPushingResponse} style={this.currentAnswerSelection === val ? selectedQuizPromptStyle : defaultQuizAnswerStyle} 
+                            onClick={() => { this.updateAnswerSelection(val); }}>
                         <CardContent>
                             {curQuestion.answers[val].response}
                         </CardContent>
                     </CardActionArea>
                 ))}
                 {wrappedButton}
+                {infoScreenValue}
             </div>
         );
     }

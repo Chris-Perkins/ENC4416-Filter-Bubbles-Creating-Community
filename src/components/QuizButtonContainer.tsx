@@ -9,6 +9,7 @@ const buttonContainerStyle = {
     marginLeft: "2.5%",
     marginRight: "2.5%",
     marginTop: "4.0%",
+    marginBottom: "4.0%",
     height: "7.5vh"
 };
 
