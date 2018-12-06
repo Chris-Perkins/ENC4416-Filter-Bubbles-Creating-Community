@@ -14,7 +14,7 @@ If Twitter or Facebook started showed you content you deemed offensive, would yo
 	A2:	Unlikely
 	A3:	Maybe depending on the content
 
-	Filter bubbles result from algorithms wanting to show people what they will engage with. Their elimination would seriously damage the retention of the people who use that platform. With that in mind, why would any company actively remove their algorithms which keep people engaged and seeing what they want to see? The solution to the extreme content which can sometimes show up on those platforms has so far been to ban that content rather than adjust algorithms to keep it away from people who don't like it [1].
+	Filter bubbles result from algorithms wanting to show people what they will engage with. Their elimination would seriously damage the retention of the people who use that platform. With that in mind, why would any company actively remove their algorithms which keep people engaged and seeing what they want to see? The solution to the extreme content which can sometimes show up on those platforms has so far been to ban that content rather than adjust algorithms to keep it away from people who don't like it.
 
 Q5:
 Are you a part of any niche online communities?
