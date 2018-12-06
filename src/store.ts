@@ -96,7 +96,7 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "The \"Incel\" community is an excellent example of what can happen when people are isolated from others by being put into a bubble. Incels are misogonistic men who blame women for their own toxic attitudes. This community has gradually radicalized itself due to its isolation and developed increasingly violent opinions. Multiple mass shooters have been self-reported incels [1].",
+                postSubmitResponse: "The \"Incel\" community is an excellent example of what can happen when people are isolated from others by being put into a bubble. Incels are misogynistic men who blame women for their own toxic attitudes. This community has gradually radicalized itself due to its isolation and developed increasingly violent opinions. Multiple mass shooters have been self-reported incels [1].",
                 sources: ["https://www.vox.com/world/2018/4/25/17277496/incel-toronto-attack-alek-minassian"]
             },
             {
@@ -134,7 +134,7 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Political polarization is the distancing of people from political common ground. It happens when people isolate themselves from the other side causing a gradual drift towards the extremes [1]. At the extremes, the \"Unite the Right\" march in Fergusson which promoted facism and anti-semetism [2] and the violent Antifa protest at Tucker Carlson's home to try and silence him [3]. It takes a fresh perspective to steer communities away from the extremes, and those perspectives can be hard to find when the people you interact with all agree with you.",
+                postSubmitResponse: "Political polarization is the distancing of people from political common ground. It happens when people isolate themselves from the other side causing a gradual drift towards the extremes [1]. At the extremes, the \"Unite the Right\" march in Fergusson which promoted fascism and anti-Semitism [2] and the violent Antifa protest at Tucker Carlson's home to try and silence him [3]. It takes a fresh perspective to steer communities away from the extremes, and those perspectives can be hard to find when the people you interact with all agree with you.",
                 sources: ["https://arxiv.org/pdf/1602.05642.pdf", "https://www.nytimes.com/2018/08/12/us/politics/charlottesville-va-protest-unite-the-right.html", "http://www.bostonherald.com/news/local_coverage/2018/11/antifa_protest_at_tucker_carlsons_home_stirs_outrage"]
             }
         ],
@@ -158,7 +158,7 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Conspiracies develop and spread in isolated communities which, lacking external perspectives, cultivate them. A few examples of the more absurd conspiracy theories are: 9/11 was an inside job, the Earth is flat, the moon landing never happened, vaccines cause autism, Jews / lizard-people / the Illuminati run the world, etc. There's a lot of overlap in these communities; paranoid people isolate themselves together, bounce crazy conspiracies off each other and kick out dissenting opinions. Eventually, you'll end up with a tiny community with a derranged world view. Filter bubbles partly contribute to this effect by showing people who already believe these sorts of things more content which agrees with them and keeping more reasonable voices from them [1].",
+                postSubmitResponse: "Conspiracies develop and spread in isolated communities which, lacking external perspectives, cultivate them. A few examples of the more absurd conspiracy theories are: 9/11 was an inside job, the Earth is flat, the moon landing never happened, vaccines cause autism, Jews / lizard-people / the Illuminati run the world, etc. There's a lot of overlap in these communities; paranoid people isolate themselves together, bounce crazy conspiracies off each other and kick out dissenting opinions. Eventually, you'll end up with a tiny community with a deranged world view. Filter bubbles partly contribute to this effect by showing people who already believe these sorts of things more content which agrees with them and keeping more reasonable voices from them [1].",
                 sources: ["https://www.wired.com/2017/05/seth-rich-filter-bubble/"]
             },
             {
@@ -177,7 +177,7 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Fake news masquerading as the truth can seriosuly damage communities. Filter bubbles are partly responsible as they will actively filter that news to the people most likely to believe and engage with it [1]. This same filtering could also easily keep any refuation of that fake news from the eyes which need to see it.",
+                postSubmitResponse: "Fake news masquerading as the truth can seriously damage communities. Filter bubbles are partly responsible as they will actively filter that news to the people most likely to believe and engage with it [1]. This same filtering could also easily keep any refutation of that fake news from the eyes which need to see it.",
                 sources: ["https://blog.dataiku.com/fake-news-and-filter-bubbles"]
             },
             {
@@ -196,7 +196,7 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Political polarization is the distancing of people from political common ground. It happens when people isolate themselves from the other side causing a gradual drift towards the extremes [1]. At the extremes, the \"Unite the Right\" march in Fergusson which promoted facism and anti-semetism [2] and the violent Antifa protest at Tucker Carlson's home to try and silence him [3]. It takes a fresh perspective to steer communities away from the extremes, and those perspectives can be hard to find when the people you interact with all agree with you.",
+                postSubmitResponse: "Political polarization is the distancing of people from political common ground. It happens when people isolate themselves from the other side causing a gradual drift towards the extremes [1]. At the extremes, the \"Unite the Right\" march in Fergusson which promoted fascism and anti-Semitism [2] and the violent Antifa protest at Tucker Carlson's home to try and silence him [3]. It takes a fresh perspective to steer communities away from the extremes, and those perspectives can be hard to find when the people you interact with all agree with you.",
                 sources: ["https://arxiv.org/pdf/1602.05642.pdf", "https://www.nytimes.com/2018/08/12/us/politics/charlottesville-va-protest-unite-the-right.html", "http://www.bostonherald.com/news/local_coverage/2018/11/antifa_protest_at_tucker_carlsons_home_stirs_outrage"]
             }
         ],
@@ -220,7 +220,7 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Most people get their news from a number of ideologically similar sources [1]. In other words, people like hearing opinions they agree with. It isn't ideal if your goal is to push everyone to the center, but no amount of modifying algorithms will sudenly make people want to listen to those they disagree with; that is built into human nature.",
+                postSubmitResponse: "Most people get their news from a number of ideologically similar sources [1]. In other words, people like hearing opinions they agree with. It isn't ideal if your goal is to push everyone to the center, but no amount of modifying algorithms will suddenly make people want to listen to those they disagree with; that is built into human nature.",
                 sources: ["https://www.americanpressinstitute.org/publications/reports/survey-research/how-americans-get-news/"]
             },
             {
@@ -258,12 +258,12 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Filter bubbles are known to help foster particularly niche communities by showing people with similar interests similar things [1]. They also help people with that niche interest find eachother, building a community. This can result in healthy communities like the various subreddits dedicated to loving animals or to unhealthy communities like the few political subreddits (which tend to become radicalized quickly).",
+                postSubmitResponse: "Filter bubbles are known to help foster particularly niche communities by showing people with similar interests similar things [1]. They also help people with that niche interest find each other, building a community. This can result in healthy communities like the various subreddits dedicated to loving animals or to unhealthy communities like the few political subreddits (which tend to become radicalized quickly).",
                 sources: ["https://web.wpi.edu/Pubs/E-project/Available/E-project-011817-125559/unrestricted/MusicDiscoveryIQP_Report_12.21.16.pdf"]
             }
         ],
         /**
-         * Questions that should be asked if someone is ignorant, but supports filter bubbles.
+         * Questions that should be asked if someone is ignorant but supports filter bubbles.
          */
         ignorantProQuestions: [
             {
@@ -282,11 +282,11 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Filter bubbles are known to help foster particularly niche communities by showing people with similar interests similar things [1]. They also help people with that niche interest find each other. On Youtube, for example, videos are organized and recommended to people based on how similar those videos are and how often someone would watch one video after another. This filtering helped create all the communities on Youtube.",
+                postSubmitResponse: "Filter bubbles are known to help foster particularly niche communities by showing people with similar interests similar things [1]. They also help people with that niche interest find each other. On YouTube, for example, videos are organized and recommended to people based on how similar those videos are and how often someone would watch one video after another. This filtering helped create all the communities on YouTube.",
                 sources: ["https://web.wpi.edu/Pubs/E-project/Available/E-project-011817-125559/unrestricted/MusicDiscoveryIQP_Report_12.21.16.pdf"]
             },
             {
-                prompt: "Have you ever happened upon racist, misogonistic or homophobic content on a social platform?",
+                prompt: "Have you ever happened upon racist, misogynistic or homophobic content on a social platform?",
                 answers: [
                     {
                         response: "I never see that kind of content",
@@ -301,7 +301,7 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Unfortunately, there are racist, misogonistic and homophobic people on the internet and those people produce content all the time (comments, videos, articles, etc.). One of the best ways to avoid seeing that kind of content is to let it be filtered out. Social platforms using filter bubbles will realize that you don't want to see that kind of content and so won't show it to you; that is the essence of a filter bubble.",
+                postSubmitResponse: "Unfortunately, there are racist, misogynistic and homophobic people on the internet and those people produce content all the time (comments, videos, articles, etc.). One of the best ways to avoid seeing that kind of content is to let it be filtered out. Social platforms using filter bubbles will realize that you don't want to see that kind of content and so won't show it to you; that is the essence of a filter bubble.",
                 sources: []
             },
             {
@@ -348,7 +348,7 @@ class Store {
                 sources: ["[https://heleo.com/facts-dont-change-peoples-minds-heres/16242/", "https://www.technologyreview.com/s/611807/this-is-what-filter-bubbles-actually-look-like/"]
             },
             {
-                prompt: "How many diferent news sources do you regularly check and read?",
+                prompt: "How many different news sources do you regularly check and read?",
                 answers: [
                     {
                         response: "I read 1 or 2 different news sources",
@@ -382,7 +382,7 @@ class Store {
                         ideal: Store.fillIdeal
                     }
                 ],
-                postSubmitResponse: "Unfortunately, none of these solutions will work to curb the effects of filter bubbles.\nAnswer (A) will cause people to become more set in their beliefs because when opposed to drastically differing opinions, people will become more set in their own.\n(B) won't work because if you show people content from random sources, there's a good chance you won't be showing them what they want to see. As an example, a liberal doesn't want to read an Info Wars article and a conservative doesn't care for Huffington Post articles.\n(C) won't work because the \"center\" is impossible to objectively define. The center in US politics is very diferent from the center in Swedish politics or the center in Israeli politics. Also everyone will have a diferent opinion about where those centers even are.",
+                postSubmitResponse: "Unfortunately, none of these solutions will work to curb the effects of filter bubbles.\nAnswer (A) will cause people to become more set in their beliefs because when opposed to drastically differing opinions, people will become more set in their own.\n(B) won't work because if you show people content from random sources, there's a good chance you won't be showing them what they want to see. As an example, a liberal doesn't want to read an Info Wars article and a conservative doesn't care for Huffington Post articles.\n(C) won't work because the \"center\" is impossible to objectively define. The center in US politics is very different from the center in Swedish politics or the center in Israeli politics. Also, everyone will have a different opinion about where those centers even are.",
                 sources: []
             }
         ]
