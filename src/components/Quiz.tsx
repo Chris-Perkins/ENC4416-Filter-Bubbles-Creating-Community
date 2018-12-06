@@ -87,6 +87,7 @@ const popupInfoDialogStyle = {
     left: "5%",
     top: "10%",
     padding: "5%",
+    paddingTop: "3%",
     paddingBottom: "1%",
     position: "absolute" as "absolute",
     backgroundColor: "#303030",
