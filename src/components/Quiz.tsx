@@ -46,7 +46,7 @@ const nextQuestionButtonStyle = {
 const defaultQuizAnswerStyle = {
     width: "99%",
     marginLeft: "0.5%",
-    height: "19%",
+    minHeight: "19%",
     paddingLeft: "3.5%",
     paddingRight: "3.5%",
     paddingTop: "1%",
@@ -60,7 +60,7 @@ const defaultQuizAnswerStyle = {
 
 const selectedQuizPromptStyle = {
     width: "100%",
-    height: "19%",
+    minHeight: "19%",
     paddingLeft: "3.5%",
     paddingRight: "3.5%",
     paddingTop: "1%",
